@@ -1,1 +1,26 @@
 @import "./sass/main.scss";
+
+$font-family_main: "Raleway", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: $font-family_main;
+  &::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: $font-family_main;
+  }
+  &::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: $font-family_main;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
