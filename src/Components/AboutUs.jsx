@@ -1,6 +1,6 @@
 function AboutUs() {
   return (
-    <section className="about-us">
+    <section className="about-us" id="about-us">
       <h2>Quiénes somos</h2>
       <div className="about-us__row row-1">
         <div className="image-side">
