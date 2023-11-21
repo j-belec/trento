@@ -10,6 +10,7 @@ import IntroBckg from "./Assets/intro-bckg.png";
 import ContactBckg from "./Assets/contact-bckg.png";
 import RedWave from "./Assets/wave-haikei.svg";
 import Intro from "./Components/Intro";
+import Services from "./Components/Services";
 
 const overlays = document.getElementById("overlays");
 
@@ -32,6 +33,7 @@ function App() {
       <Footer />
       <img src={ContactBckg} alt="contact bckg" className="pharmacy-img2" />
       <img src={RedWave} alt="red background wave color" className="red-wave" />
+      <Services />
     </div>
   );
 }

@@ -1,0 +1,84 @@
+.services {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(
+      to left,
+      hsla(11, 61%, 44%, 0.851),
+      hsla(343, 61%, 44%, 0.851)
+    ),
+    url("../../Assets/services-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  &__tittle {
+    font-size: $fs-section-heading;
+    margin-bottom: 10rem;
+  }
+
+  &__card-container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  &__card {
+    position: relative;
+    width: 25rem;
+    height: 30rem;
+    font-size: 1.8rem;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    transition: all 0.2s;
+  }
+
+  &__card:hover {
+    cursor: pointer;
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 8px;
+  }
+
+  &__card--icon {
+    padding-top: 2rem;
+    font-size: 10rem !important;
+  }
+}
+
+.wave-top {
+  position: absolute;
+  top: 0;
+  background-image: url("../../Assets/wave-haikei4.svg");
+
+  aspect-ratio: 900/450;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+}
+
+.wave-btm {
+  position: absolute;
+  bottom: 0;
+  background-image: url("../../Assets/wave-haikei9.svg");
+
+  aspect-ratio: 900/450;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+}
