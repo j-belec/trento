@@ -1,10 +1,10 @@
-import {
-  APIProvider,
-  Map,
-  AdvancedMarker,
-  Pin,
-  // InfoWindow,
-} from "@vis.gl/react-google-maps";
+// import {
+//   APIProvider,
+//   Map,
+//   AdvancedMarker,
+//   Pin,
+//   // InfoWindow,
+// } from "@vis.gl/react-google-maps";
 
 function Contact() {
   const position = { lat: -34.64327503305144, lng: -58.375273128835794 };
@@ -15,7 +15,7 @@ function Contact() {
       <h2>Contacto</h2>
       <div className="box">
         <div className="map">
-          <APIProvider apikey={TrentoAPI}>
+          {/* <APIProvider apikey={TrentoAPI}>
             <div>
               <Map zoom={9} center={position} mapId="f60bcf886db1f811">
                 <AdvancedMarker>
@@ -27,7 +27,7 @@ function Contact() {
                 </AdvancedMarker>
               </Map>
             </div>
-          </APIProvider>
+          </APIProvider> */}
         </div>
         <form action="POST">
           <label htmlFor="fullname">Nombre Completo</label>

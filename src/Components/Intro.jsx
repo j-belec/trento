@@ -1,4 +1,4 @@
-import Doctors from "../Assets/intro-doctors.svg";
+import Doctors from "../assets/intro-doctors.svg";
 
 function Intro() {
   return (
