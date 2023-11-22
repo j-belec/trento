@@ -6,9 +6,9 @@ import { useState } from "react";
 import Header from "./Components/Header";
 import Contact from "./Components/Contact";
 
-import IntroBckg from "./assets/intro-bckg.png";
-import ContactBckg from "./assets/contact-bckg.png";
-import RedWave from "./assets/wave-haikei.svg";
+import IntroBckg from "./Assets/intro-bckg.png";
+import ContactBckg from "./Assets/contact-bckg.png";
+import RedWave from "./Assets/wave-haikei.svg";
 import Intro from "./Components/Intro";
 import Services from "./Components/Services";
 import QualityPolitics from "./Components/QualityPolitics";
