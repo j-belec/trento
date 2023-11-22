@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom";
 import AboutUs from "./Components/AboutUs";
-import Footer from "./Components/Footer";
 import MobileNav from "./Components/MobileNav";
 import { useState } from "react";
 import Header from "./Components/Header";
@@ -12,6 +11,7 @@ import RedWave from "./Assets/wave-haikei.svg";
 import Intro from "./Components/Intro";
 import Services from "./Components/Services";
 import QualityPolitics from "./Components/QualityPolitics";
+import Footer from "./Components/Footer";
 
 const overlays = document.getElementById("overlays");
 

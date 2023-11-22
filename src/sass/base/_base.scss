@@ -50,8 +50,7 @@ html {
     position: absolute;
     width: 100vw;
     height: 115vh;
-    transform: translate(-50%);
-    right: -50%;
+    right: 0;
     bottom: 0;
     z-index: -1;
   }
@@ -59,8 +58,8 @@ html {
   .red-wave {
     position: absolute;
     width: 100vw;
-    transform: translate(-50%) scaleX(-1);
-    right: -50%;
+    transform: scaleX(-1);
+    right: 0;
     bottom: 0;
     z-index: -1;
   }
