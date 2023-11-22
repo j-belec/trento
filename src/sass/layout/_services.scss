@@ -6,7 +6,7 @@
       hsla(11, 61%, 44%, 0.851),
       hsla(343, 61%, 44%, 0.851)
     ),
-    url("../../Assets/services-bg.jpg");
+    url("../../assets/services-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -38,6 +38,7 @@
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 1rem;
     padding: 1rem;
+    outline: 2px solid transparent;
 
     display: flex;
     flex-direction: column;
@@ -62,7 +63,7 @@
 .wave-top {
   position: absolute;
   top: 0;
-  background-image: url("../../Assets/wave-haikei4.svg");
+  background-image: url("../../assets/wave-haikei4.svg");
 
   aspect-ratio: 900/450;
   width: 100%;
@@ -74,7 +75,7 @@
 .wave-btm {
   position: absolute;
   bottom: 0;
-  background-image: url("../../Assets/wave-haikei9.svg");
+  background-image: url("../../assets/wave-haikei9.svg");
 
   aspect-ratio: 900/450;
   width: 100%;

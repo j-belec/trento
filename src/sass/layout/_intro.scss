@@ -1,0 +1,23 @@
+.intro {
+  height: 100vh;
+  max-width: 100rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    display: flex;
+
+    h1 {
+      font-size: 3.2rem;
+      color: #fff;
+      align-self: baseline;
+      padding-top: $spacing-3;
+    }
+
+    .doctors {
+      height: 37.5rem;
+    }
+  }
+}
