@@ -4,6 +4,7 @@ import MobileNav from "./Components/MobileNav";
 import { useState } from "react";
 import Header from "./Components/Header";
 import Services from "./Components/Services";
+import QualityPolitics from "./Components/QualityPolitics";
 
 const overlays = document.getElementById("overlays");
 
@@ -21,6 +22,7 @@ function App() {
       <Header mobNavOpen={mobileNavOpen} onMenuClick={toggleNav} />
       <AboutUs />
       <Services />
+      <QualityPolitics />
     </div>
   );
 }

@@ -44,7 +44,7 @@
     align-items: center;
     gap: 2rem;
 
-    transition: all 0.2s;
+    transition: all 0.2s ease-out;
   }
 
   &__card:hover {
