@@ -5,8 +5,11 @@
   padding: $spacing-1 $spacing-2;
   z-index: 9999;
   // remove when hero background is coded
-  background: $gradient-main;
   color: #fff;
+
+  &-bg-visible {
+    background: $gradient-main;
+  }
 
   /////////
   //DESKTOP

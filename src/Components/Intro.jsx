@@ -2,7 +2,7 @@ import Doctors from "../Assets/intro-doctors.svg";
 
 function Intro() {
   return (
-    <section className="intro">
+    <section className="intro" id="intro">
       <div>
         <h1>
           Administramos todos los servicios requeridos por empresas del sector

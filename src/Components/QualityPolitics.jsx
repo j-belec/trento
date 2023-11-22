@@ -1,6 +1,6 @@
 function QualityPolitics() {
   return (
-    <section className="qp">
+    <section className="qp" id="quality-politics">
       <h2 className="qp__title">Política de calidad</h2>
       <div className="qp-part1">
         <div className="qp-part1__img-container">

@@ -11,7 +11,7 @@ function Contact() {
   const TrentoAPI = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <h2>Contacto</h2>
       <div className="box">
         <div className="map">
