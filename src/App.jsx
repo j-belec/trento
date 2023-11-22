@@ -3,14 +3,15 @@ import AboutUs from "./Components/AboutUs";
 import MobileNav from "./Components/MobileNav";
 import { useState } from "react";
 import Header from "./Components/Header";
-import Intro from "./Components/Intro";
-import Services from "./Components/Services";
-import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
 
 import IntroBckg from "./Assets/intro-bckg.png";
 import ContactBckg from "./Assets/contact-bckg.png";
 import RedWave from "./Assets/wave-haikei.svg";
+import Intro from "./Components/Intro";
+import Services from "./Components/Services";
+import QualityPolitics from "./Components/QualityPolitics";
+import Footer from "./Components/Footer";
 
 const overlays = document.getElementById("overlays");
 
@@ -30,6 +31,7 @@ function App() {
       <Intro />
       <AboutUs />
       <Services />
+      <QualityPolitics />
       <Contact />
       <Footer />
       <img src={ContactBckg} alt="contact bckg" className="pharmacy-img2" />
