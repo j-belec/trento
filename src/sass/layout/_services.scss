@@ -18,15 +18,51 @@
   justify-content: center;
   text-align: center;
 
+  @media (max-width: 1200px) {
+    height: 80rem;
+  }
+
+  @media (max-width: 1024px) {
+    height: 95rem;
+  }
+
+  @media (max-width: 600px) {
+    height: 80rem;
+  }
+
+  @media (max-width: 480px) {
+    height: 70rem;
+  }
+
   &__tittle {
     font-size: $fs-section-heading;
-    margin-bottom: 10rem;
+    margin-bottom: $spacing-5;
+
+    @media (max-width: 600px) {
+      font-size: 2.8rem;
+      margin-bottom: $spacing-4;
+    }
   }
 
   &__card-container {
     display: flex;
     justify-content: center;
     gap: 5rem;
+
+    margin: 0 5%;
+
+    @media (max-width: 1440px) {
+      gap: 2rem;
+    }
+
+    @media (max-width: 1200px) {
+      margin: 0 2.5%;
+      gap: 1rem;
+    }
+
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__card {
@@ -46,17 +82,49 @@
     gap: 2rem;
 
     transition: all 0.2s ease-out;
+
+    @media (max-width: 1024px) {
+      width: 22rem;
+      height: 28rem;
+    }
+
+    @media (max-width: 600px) {
+      width: 18rem;
+      height: 24rem;
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: 480px) {
+      width: 40%;
+      font-size: 1.4rem;
+      height: 20rem;
+      padding-bottom: 1rem;
+    }
   }
 
   &__card:hover {
     cursor: pointer;
     outline: 2px solid rgba(255, 255, 255, 0.5);
     outline-offset: 8px;
+
+    @media (max-width: 1200px) {
+      outline: 2px solid transparent;
+      outline-offset: 0;
+    }
   }
 
   &__card--icon {
     padding-top: 2rem;
     font-size: 10rem !important;
+
+    @media (max-width: 600px) {
+      padding-top: 0.5rem;
+      font-size: 8rem !important;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 6rem !important;
+    }
   }
 }
 

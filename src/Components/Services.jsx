@@ -17,17 +17,17 @@ function Services() {
           </p>
         </div>
         <div className="services__card">
-          <ManageAccountsOutlinedIcon className="services__card--icon" />
-          <p>
-            Administramos todos los servicios requeridos por empresas del sector
-            de la salud.
-          </p>
-        </div>
-        <div className="services__card">
           <QueryStatsOutlinedIcon className="services__card--icon" />
           <p>
             Ofrecemos análisis estadísticos y bases de datos de cualquier
             producto farmacéutico o miembro afiliado.
+          </p>
+        </div>
+        <div className="services__card">
+          <ManageAccountsOutlinedIcon className="services__card--icon" />
+          <p>
+            Administramos todos los servicios requeridos por empresas del sector
+            de la salud.
           </p>
         </div>
         <div className="services__card">
