@@ -105,11 +105,20 @@
     border-radius: 10rem;
     border: none;
     padding: 1.8rem 2rem;
-    background: linear-gradient(to top right, #b43b2b, #b42b51);
+    background: linear-gradient(to top right, #c35574, #b43b2b, #b42b51);
     color: #fff;
     font-size: 1.8rem;
     font-weight: 500;
     width: 100%;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: all 0.3s;
+    font-weight: 600;
+
+    &:hover {
+      cursor: pointer;
+      background-position: 0 0;
+    }
   }
 }
 
