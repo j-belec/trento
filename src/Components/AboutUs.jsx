@@ -1,8 +1,22 @@
 function AboutUs() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("about-show");
+      } else {
+        entry.target.classList.remove("about-show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".hidden");
+  hiddenElements.forEach(el => observer.observe(el));
+
   return (
     <section className="about-us" id="about-us">
       <h2>Quiénes somos</h2>
-      <div className="about-us__row row-1">
+      <div className="about-us__row row-1 hidden">
         <div className="image-side">
           <div className="background-box">
             <img src="about-us-1.jpg" alt="pharmaceutical store" />
@@ -24,7 +38,7 @@ function AboutUs() {
           </p>
         </div>
       </div>
-      <div className="about-us__row row-2">
+      <div className="about-us__row row-2 hidden">
         <div className="image-side">
           <div className="background-box">
             <img
