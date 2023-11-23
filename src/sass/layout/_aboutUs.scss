@@ -1,5 +1,5 @@
 .about-us {
-  max-width: 100rem;
+  max-width: $section-max-width;
   padding: 0 $spacing-3;
   margin: 0 auto;
   padding-top: calc(1.2 * $spacing-5);
@@ -14,7 +14,7 @@
   &__row {
     display: flex;
     justify-content: space-between;
-    gap: $spacing-3;
+    gap: $spacing-4;
     margin-bottom: $spacing-5;
 
     .image-side {
