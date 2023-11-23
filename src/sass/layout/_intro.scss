@@ -15,10 +15,12 @@
       color: #fff;
       align-self: baseline;
       padding-top: $spacing-3;
+      animation: slide-left 0.5s ease-out;
     }
 
     .doctors {
       height: 50rem;
+      animation: slide-right 0.5s ease-out;
     }
   }
 }
