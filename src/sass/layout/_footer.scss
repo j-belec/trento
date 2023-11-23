@@ -17,3 +17,31 @@ footer {
     padding-bottom: $spacing-3;
   }
 }
+
+@media (max-width: 1200px) {
+  footer {
+    padding-bottom: $spacing-2;
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      padding-bottom: $spacing-2;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  footer {
+    padding: $spacing-4;
+    h2 {
+      font-size: 1.6rem;
+      padding-bottom: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      padding-bottom: $spacing-2;
+    }
+  }
+}

@@ -64,3 +64,26 @@ html {
     z-index: -1;
   }
 }
+
+@media (max-width: 1024px) {
+  .main-container {
+    .red-wave {
+      width: 300vw;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    .red-wave {
+      width: 400vw;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .main-container {
+    .red-wave {
+      width: 700vw;
+    }
+  }
+}

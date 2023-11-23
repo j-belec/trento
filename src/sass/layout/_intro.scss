@@ -8,6 +8,7 @@
 
   div {
     display: flex;
+    padding: 0 4rem;
 
     h1 {
       font-size: 4rem;
@@ -18,6 +19,97 @@
 
     .doctors {
       height: 50rem;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .intro {
+    div {
+      padding: 0 4rem;
+
+      h1 {
+        font-size: 3.6rem;
+      }
+
+      .doctors {
+        height: 45rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .intro {
+    div {
+      padding: 0 4rem;
+
+      h1 {
+        font-size: 3.2rem;
+      }
+
+      .doctors {
+        height: 42.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro {
+    div {
+      padding: 0 2.4rem;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .doctors {
+        height: 35rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    div {
+      padding: 0 2rem;
+      flex-direction: column;
+      gap: 4.8rem;
+
+      h1 {
+        font-size: 3.2rem;
+        max-width: 90vw;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .doctors {
+        height: 35rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .intro {
+    div {
+      padding: 0 2rem;
+      flex-direction: column;
+      gap: 5.6rem;
+      margin-bottom: 10rem;
+
+      h1 {
+        font-size: 2.2rem;
+        padding: 0 1.8rem;
+        max-width: max-content;
+      }
+
+      .doctors {
+        height: 28.5rem;
+        margin-left: 5rem;
+      }
     }
   }
 }
