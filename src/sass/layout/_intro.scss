@@ -97,7 +97,7 @@
 @media (max-width: 500px) {
   .intro {
     div {
-      padding: 0 2rem;
+      // padding: 0 2rem;
       flex-direction: column;
       gap: 5.6rem;
       margin-bottom: 10rem;
@@ -110,6 +110,25 @@
 
       .doctors {
         height: 28.5rem;
+        margin-left: 5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .intro {
+    div {
+      padding: 0 1rem;
+
+      h1 {
+        font-size: 2rem;
+        padding: 0 1.4rem;
+        max-width: max-content;
+      }
+
+      .doctors {
+        height: 22.5rem;
         margin-left: 5rem;
       }
     }
