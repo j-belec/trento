@@ -1,17 +1,42 @@
-function AboutUs() {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      console.log(entry);
-      if (entry.isIntersecting) {
-        entry.target.classList.add("about-show");
-      } else {
-        entry.target.classList.remove("about-show");
-      }
-    });
-  });
+import { useEffect, useRef } from "react";
 
-  const hiddenElements = document.querySelectorAll(".hidden");
-  hiddenElements.forEach(el => observer.observe(el));
+function AboutUs() {
+  // const row1Ref = useRef(null);
+  // const row2Ref = useRef(null);
+
+  // const observer = new IntersectionObserver(entries => {
+  //   entries.forEach(entry => {
+  //     console.log(entry);
+  //     if (entry.isIntersecting) {
+  //       entry.target.classList.add("about-show");
+  //     } else {
+  //       entry.target.classList.remove("about-show");
+  //     }
+  //   });
+  // });
+
+  // const hiddenElements = document.querySelectorAll(".hidden");
+  // hiddenElements.forEach(el => observer.observe(el));
+
+  useEffect(() => {
+    const observerCallback = entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("about-show");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback);
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach(el => observer.observe(el));
+
+    // Cleanup function to disconnect the observer when the component unmounts
+    return () => {
+      hiddenElements.forEach(el => observer.unobserve(el));
+    };
+  }, []); // Empty dependency array to ensure the effect runs only once on mount
 
   return (
     <section className="about-us" id="about-us">
