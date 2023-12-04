@@ -80,8 +80,8 @@ function Contact() {
       )
       .then((result) => {
         console.log(result, result.text);
-        setToastContent("Formulario enviado!");
-        setToastColor("$color-main__variant");
+        setToastContent("¡Formulario enviado!");
+        // setToastColor("var(--confirmation-color)");
         setShowToast(true);
         setTimeout(() => setShowToast(false), 5000);
         // Resetting all values to ""

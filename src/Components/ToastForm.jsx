@@ -16,7 +16,7 @@ function ToastForm(props) {
       ].join(" ")}
       style={{ backgroundColor: props.bgColor }}
     >
-      <p>Formulario enviado!</p>
+      <p>¡Formulario enviado!</p>
       <FontAwesomeIcon
         icon={faClose}
         className="toast-close"

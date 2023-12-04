@@ -254,7 +254,7 @@
 // Toast Form
 .toast {
   position: fixed;
-  top: 2rem;
+  top: 8rem;
   right: 2rem;
 
   max-width: 90vw;
@@ -310,7 +310,7 @@
   right: 100%;
   height: 100%;
   width: 100%;
-  background-color: $color-main__variant;
+  background-color: $color-contact;
   z-index: 3;
 }
 
