@@ -5,16 +5,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: $spacing-1 $section-padding-pc;
+
+  @media (max-width: 1400px) {
+    padding: $spacing-1 $section-padding-tab;
+  }
 
   div {
     display: flex;
     padding: 0 4rem;
 
+    @media (max-width: 1024px) {
+      padding: 0 2rem;
+    }
     h1 {
       font-size: 4rem;
       color: #fff;
       align-self: baseline;
-      padding-top: $spacing-3;
       animation: slide-left 0.5s ease-out;
     }
 
@@ -28,8 +35,6 @@
 @media (max-width: 1400px) {
   .intro {
     div {
-      padding: 0 4rem;
-
       h1 {
         font-size: 3.6rem;
       }
@@ -44,8 +49,6 @@
 @media (max-width: 1200px) {
   .intro {
     div {
-      padding: 0 4rem;
-
       h1 {
         font-size: 3.2rem;
       }
@@ -60,8 +63,6 @@
 @media (max-width: 1024px) {
   .intro {
     div {
-      padding: 0 2.4rem;
-
       h1 {
         font-size: 3rem;
       }
@@ -73,7 +74,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
   .intro {
     div {
       padding: 0 2rem;
