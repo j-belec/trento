@@ -176,6 +176,7 @@
 
       &:hover {
         color: $color-main;
+        border-color: $color-main;
         &:before {
           width: 100%;
         }
