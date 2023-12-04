@@ -1,7 +1,117 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import useInputValidation from "../Hooks/useInputValidation";
+import { Transition } from "react-transition-group";
+import ToastForm from "./ToastForm";
+
 function Contact() {
+  const formRef = useRef();
+  const nodeRef = useRef(null);
+  const [showToast, setShowToast] = useState(false);
+  const [toastColor, setToastColor] = useState("");
+  const [toastContent, setToastContent] = useState("");
+  const closeToast = () => setShowToast(false);
+
+  const regularExpressions = {
+    fullname: /^[a-zA-ZÁ-ÿ\s]{2,100}$/,
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+  };
+
+  // Validacion inputs
+  const {
+    value: fullnameValue,
+    isValid: fullnameIsValid,
+    valueChangeHandler: fullnameChangeHandler,
+    inputBlurHandler: fullnameBlurHandler,
+    reset: resetFullname,
+  } = useInputValidation((value) => regularExpressions.fullname.test(value));
+
+  const {
+    value: emailValue,
+    isValid: emailIsValid,
+    valueChangeHandler: emailChangeHandler,
+    inputBlurHandler: emailBlurHandler,
+    reset: resetEmail,
+  } = useInputValidation((value) => regularExpressions.email.test(value));
+
+  const {
+    value: numberValue,
+    isValid: numberIsValid,
+    valueChangeHandler: numberChangeHandler,
+    inputBlurHandler: numberBlurHandler,
+    reset: resetNumber,
+  } = useInputValidation((value) => value !== "");
+
+  const {
+    value: messageValue,
+    isValid: messageIsValid,
+    valueChangeHandler: messageChangeHandler,
+    inputBlurHandler: messageBlurHandler,
+    reset: resetMessage,
+  } = useInputValidation((value) => value !== "");
+
+  // Validacion form
+  let formIsValid = false;
+
+  if (fullnameIsValid && emailIsValid && numberIsValid && messageIsValid) {
+    formIsValid = true;
+  }
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    if (!formIsValid) {
+      return;
+    }
+
+    //From this point the form is validated and ready to be sent or else.
+    resetFullname();
+    resetEmail();
+    resetMessage();
+    resetNumber();
+
+    // Sending mail
+    emailjs
+      .sendForm(
+        "service_l08kwwb",
+        "template_1az1rvq",
+        formRef.current,
+        "pNq_BVvuf-lL9PnDb"
+      )
+      .then((result) => {
+        console.log(result, result.text);
+        setToastContent("Formulario enviado!");
+        setToastColor("$color-main__variant");
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 5000);
+        // Resetting all values to ""
+        resetFullname();
+        resetEmail();
+        resetMessage();
+        resetNumber();
+      })
+      .catch((err) => {
+        console.log(err.text);
+        setToastContent("Algo salió mal.");
+        setToastColor("var(--accent-color)");
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 5000);
+      });
+  };
+
   return (
     <section className="contact" id="contact">
       <h2>Contacto</h2>
+      <Transition in={showToast} timeout={200} nodeRef={nodeRef}>
+        {(state) => (
+          <ToastForm
+            closeFn={closeToast}
+            transitionState={state}
+            bgColor={toastColor}
+            content={toastContent}
+          />
+        )}
+      </Transition>
       <div className="box">
         <div className="map">
           <iframe
@@ -16,13 +126,21 @@ function Contact() {
           ></iframe>
         </div>
         <div className="form-box">
-          <form action="POST" className="form">
+          <form
+            action="POST"
+            ref={formRef}
+            onSubmit={submitHandler}
+            className="form"
+          >
             <div className="form__group">
               <input
                 className="form__input"
                 type="text"
                 name="fullname"
                 placeholder="Nombre y Apellido"
+                value={fullnameValue}
+                onChange={fullnameChangeHandler}
+                onBlur={fullnameBlurHandler}
                 required
               />
               <label className="form__label" htmlFor="fullname">
@@ -35,6 +153,9 @@ function Contact() {
                 type="email"
                 name="email"
                 placeholder="Email"
+                value={emailValue}
+                onChange={emailChangeHandler}
+                onBlur={emailBlurHandler}
                 required
               />
               <label className="form__label" htmlFor="email">
@@ -47,6 +168,9 @@ function Contact() {
                 type="tel"
                 name="phone"
                 placeholder="11-4532-0998"
+                value={numberValue}
+                onChange={numberChangeHandler}
+                onBlur={numberBlurHandler}
                 required
               />
               <label className="form__label" htmlFor="phone">
@@ -59,6 +183,9 @@ function Contact() {
                 type="text"
                 name="consultation"
                 placeholder="Consulta"
+                value={messageValue}
+                onChange={messageChangeHandler}
+                onBlur={messageBlurHandler}
                 required
               />
               <label className="form__label" htmlFor="consultation">
@@ -66,7 +193,9 @@ function Contact() {
               </label>
             </div>
             <div className="form__group">
-              <button className="send">Enviar</button>
+              <button className="send" disabled={!formIsValid}>
+                Enviar
+              </button>
             </div>
           </form>
         </div>
