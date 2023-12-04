@@ -32,13 +32,18 @@ function Header(props) {
       {/* DESKTOP */}
       <div className="header-desktop">
         <a href="/" className="header-desktop__logo">
-          <h1>Trento</h1>
+          {/* <h1>Trento</h1>
           <div className="header-desktop__logo-vl" />
           <span>
             Insumos
             <br />
             médicos
-          </span>
+          </span> */}
+          <img
+            src="logo.png"
+            alt="trento logo"
+            className="header-desktop__logo"
+          />
         </a>
         <ul className="header-desktop__items-container">
           <li>
