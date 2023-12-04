@@ -40,7 +40,7 @@ function Header(props) {
             médicos
           </span> */}
           <img
-            src="logo-white.png"
+            src="logo.png"
             alt="trento logo"
             className="header-desktop__logo"
           />
