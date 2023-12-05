@@ -2,30 +2,30 @@ import { Sling as Hamburger } from "hamburger-react";
 import { useState, useEffect } from "react";
 
 function Header(props) {
-  const [background, setBackground] = useState(false);
+  const [background, setBackground] = useState(true);
 
   useEffect(() => {
     const obsOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.8,
+      threshold: 0.01,
     };
 
     const obsCallback = ([entry]) => {
-      if (!entry.isIntersecting) {
-        setBackground(false);
-      } else {
+      if (entry.isIntersecting) {
         setBackground(true);
+      } else {
+        setBackground(false);
       }
     };
 
     const observer = new IntersectionObserver(obsCallback, obsOptions);
-    const target = document.getElementById("intro");
+    const target = document.getElementById("about-us");
 
     observer.observe(target);
   }, []);
 
-  let headerClass = background ? "header" : "header header-bg-visible";
+  let headerClass = background ? "header header-bg-visible" : "header";
 
   return (
     <div className={headerClass} id="header">
