@@ -71,6 +71,15 @@ html {
 //   transition: all 0.5s;
 // }
 
+.politics-hidden {
+  opacity: 0;
+  transform: translateY(-24rem);
+}
+.politics-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .services-hidden {
   opacity: 0;
   filter: blur(5px);

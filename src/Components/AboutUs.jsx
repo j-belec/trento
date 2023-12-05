@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 function AboutUs() {
   // const row1Ref = useRef(null);
