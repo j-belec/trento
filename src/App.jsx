@@ -19,7 +19,7 @@ function App() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const toggleNav = () => {
-    setMobileNavOpen(state => !state);
+    setMobileNavOpen((state) => !state);
   };
 
   return (
