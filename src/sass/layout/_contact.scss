@@ -168,6 +168,7 @@
 
     &__label {
       font-size: 1.2rem;
+      transform: translateY(-7.5rem);
     }
 
     .send {
@@ -225,7 +226,7 @@
 
     &__label {
       font-size: 1rem;
-      transform: translateY(-7rem);
+      transform: translateY(-6.5rem);
     }
 
     textarea + &__label {
@@ -255,7 +256,7 @@
 // Toast Form
 .toast {
   position: fixed;
-  top: 8rem;
+  top: 9.5rem;
   right: 2rem;
 
   max-width: 90vw;
@@ -346,7 +347,7 @@
 
 @media (max-width: 768px) {
   .toast {
-    top: 7rem;
+    top: 14rem;
     right: unset;
     left: 50%;
     transform: translate(-50%, -100%);
