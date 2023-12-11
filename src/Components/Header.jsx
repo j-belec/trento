@@ -31,7 +31,7 @@ function Header(props) {
     <div className={headerClass} id="header">
       {/* DESKTOP */}
       <div className="header-desktop">
-        <a href="/" className="header-desktop__logo">
+        <a href="#intro" className="header-desktop__logo">
           {/* <h1>Trento</h1>
           <div className="header-desktop__logo-vl" />
           <span>
