@@ -70,7 +70,7 @@ function Header(props) {
       </div>
       {/* MOBILE */}
       <div className="header-mobile">
-        <div className="logo">
+        {/* <div className="logo">
           <h1>Trento</h1>
           <div className="logo__vl" />
           <span>
@@ -78,7 +78,12 @@ function Header(props) {
             <br />
             médicos
           </span>
-        </div>
+        </div> */}
+        <img
+          src="logo.png"
+          alt="trento logo"
+          className="header-desktop__logo logo"
+        />
         <div onClick={props.onMenuClick} className="mobile-nav-icon">
           <Hamburger
             toggled={props.mobNavOpen}
