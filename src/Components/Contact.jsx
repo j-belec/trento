@@ -73,10 +73,10 @@ function Contact() {
     // Sending mail
     emailjs
       .sendForm(
-        "service_l08kwwb",
-        "template_1az1rvq",
+        "service_6x6ptkb",
+        "template_hlf7tod",
         formRef.current,
-        "pNq_BVvuf-lL9PnDb"
+        "W7X7Cd19pHpHM1eqZ"
       )
       .then((result) => {
         console.log(result, result.text);
